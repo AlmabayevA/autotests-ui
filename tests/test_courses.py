@@ -47,3 +47,12 @@ def test_create_course(course_list_page: CoursesListPage, create_course_page: Cr
             min_score="10",
             estimated_time="2 weeks",
     )
+
+@pytest.mark.courses
+@pytest.mark.regression
+def test_empty_courses_list(course_list_page: CoursesListPage):
+    course_list_page.visit("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses")
+    course_list_page.sidebar.check_visible()
+    course_list_page.navbar.check_visible("username")
+    course_list_page.check_visible_courses_title()
+    course_list_page.check_visible_empty_view()
