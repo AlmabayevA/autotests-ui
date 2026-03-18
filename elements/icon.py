@@ -1,4 +1,7 @@
 from elements.base_element import BaseElement
 
 class Icon(BaseElement):
-    pass
+    @property
+    def type(self) -> str:
+        return "icon"
+

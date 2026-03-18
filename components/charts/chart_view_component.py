@@ -1,3 +1,4 @@
+import allure
 from playwright.sync_api import Page, expect
 
 from components.base_component import BaseComponent
@@ -14,6 +15,7 @@ class ChartViewComponent(BaseComponent):
         self.title = Text(page, f"{identifier}-widget-title-text", 'Title')
         self.chart = Image(page, f"{identifier}-{chart_type}-chart", 'Chart')
 
+    @allure.step('Check visible title and chart ')
     def check_visible(self):
         self.title.check_visible()
         self.chart.check_visible()
