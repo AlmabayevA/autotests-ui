@@ -2,8 +2,8 @@
 .idea
 
 # python
-.venv
-venv
+.venv/
+venv/
 __pycache__
 
 # allure
