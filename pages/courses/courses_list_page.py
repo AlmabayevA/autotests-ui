@@ -7,7 +7,7 @@ from components.courses.course_view_component import CourseViewComponent
 from components.courses.course_view_menu_component import CourseViewMenuComponent
 from components.courses.courses_list_toolbar_view_component import CoursesListToolbarViewComponent
 
-from  elements.text import Text
+from elements.text import Text
 from elements.icon import Icon
 
 from pages.base_page import BasePage
